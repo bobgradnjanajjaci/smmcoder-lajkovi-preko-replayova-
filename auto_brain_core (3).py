@@ -2,9 +2,9 @@ import requests
 from comment_finder import find_target_comment
 from like_rules import calculate_target_likes
 
-API_KEY = "c849788f60dd591e636c5d079b0a8d62"
-PANEL_URL = "https://justanotherpanel.com/api/v2"
-SERVICE_ID = 9998
+API_KEY = "c8897bba6c4da59edea6a936a69d2ef0"
+PANEL_URL = "https://smmcoder.com/api/v2"
+SERVICE_ID = 8330
 
 def process_video(video_url: str):
     result = find_target_comment(video_url)
@@ -44,3 +44,4 @@ def process_video(video_url: str):
         }
     except Exception as e:
         return {"status": "error", "message": f"Panel error: {e}"}
+
