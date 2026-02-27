@@ -76,7 +76,7 @@ def pick_best_comment(comments):
     best_replies = -1
     top_likes = 0
 
-    for c in comments[:60]:   # gledamo prvih 60 komentara
+    for c in comments[:80]:   # gledamo prvih 60 komentara
         try:
             text = c.get("text") or ""
             likes = int(c.get("digg_count") or 0)
@@ -136,6 +136,7 @@ def find_target_comment(video_url: str) -> dict:
             time.sleep(RETRY_DELAY)
 
     return {"found": False, "reason": "no_match"}
+
 
 
 
